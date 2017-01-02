@@ -24,7 +24,9 @@ if (have_posts()):
         }
         ?>
         
-        </p>        
+        </p>
+        
+        <?php the_post_thumbnail('banner-image'); ?>        
 
         <?php the_content(); ?>
     </article>
