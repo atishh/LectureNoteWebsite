@@ -99,8 +99,14 @@ article.post:last-of-type {
 
 /* Page Layout */
 article.page h2 {
-    font-size: 300%;
+    font-size: 225%;
+    margin-bottom: 15px;
 }
+
+/* Clearfix */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
 
 /*Two Column Title Layout */
 div.title-column {
