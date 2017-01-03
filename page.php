@@ -8,7 +8,7 @@ if (have_posts()):
     <article class="post page">
 
         <?php
-        if( has_children() OR $post->post->parent > 0) { ?>
+        if( has_children() OR $post->post_parent > 0) { ?>
     
             <nav class="site-nav children-links clearfix">
     
@@ -19,7 +19,6 @@ if (have_posts()):
                 <ul>
                     <?php
                     $args = array(
-                        //'child_of' => $post->ID,
                         'child_of' => get_top_ancestor_id(),
                         'title_li' => ''
                     );
