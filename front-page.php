@@ -83,6 +83,8 @@ endif; ?>
 </div>
 
 <?php
+echo setAndViewPostViews(get_the_ID());
+ 
 get_footer();
 
 ?>
