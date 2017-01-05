@@ -44,8 +44,15 @@ endif; ?>
 
     <div class="one-half">
         <?php // opinion posts loop begins here
-        $opinionPosts = new WP_Query('cat=10&posts_per_page=2&orderby=title&order=ASC');
-        
+        $args = array (
+            'category_name' => 'news',
+            'posts_per_page' => 2,
+            'orderby' => 'title',
+            'order' => 'ASC'
+        );
+        $opinionPosts = new WP_Query($args);
+        //$opinionPosts = new WP_Query('cat=10&posts_per_page=2&orderby=title&order=ASC');
+
         if ($opinionPosts->have_posts()) :
         
             while ($opinionPosts->have_posts()) : $opinionPosts->the_post();
